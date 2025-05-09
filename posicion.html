@@ -8,45 +8,89 @@
 
 <body class="bg-dark">
     <header class="text-center text-white py-3 mb-4 rounded">
-        <h1>Helper de borde</h1>
+        <h1>Helper de posición</h1>
     </header>
-    <div class="text-center text-white">
-        <div class="container text-white">
-            <div class="row mb-3">
-                <div class="col bg-secondary p-3 rounded">
-                    <strong>Estática:</strong>
-                    <div class="position-static bg-light text-dark p-2 rounded">Posición estática</div>
-                </div>
-                <div class="col bg-secondary p-3 rounded">
-                    <strong>Relativa:</strong>
-                    <div class="position-relative bg-light text-dark p-2 rounded">Posición relativa</div>
+    <div class="container m-3 text-white">
+        <div class="mb-3">
+            <h3>Posición Estática</h3>
+            <div class="bg-dark rounded p-2 text-white">
+                <code>&lt;div class="position-static bg-light text-dark p-2 rounded"&gt;Estática&lt;/div&gt;</code>
+            </div>
+            <div class="bg-light text-dark p-2 rounded mt-1 position-static">Estática</div>
+        </div>
+
+        <div class="mb-3">
+            <h3>Posición Relativa</h3>
+            <div class="bg-dark rounded p-2 text-white">
+                <code>&lt;div class="position-relative bg-light text-dark p-2 rounded" style="top: 10px; left: 10px;"&gt;Relativa&lt;/div&gt;</code>
+            </div>
+            <div class="bg-light text-dark p-2 rounded mt-1 position-relative" style="top: 10px; left: 10px;">Relativa
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <h3>Posición Absoluta</h3>
+            <div class="bg-dark rounded p-2 text-white">
+                <code>&lt;div class="position-absolute bg-light text-dark p-2 rounded" style="top: 10px; left: 10px;"&gt;Absoluta&lt;/div&gt;</code>
+            </div>
+            <div class="bg-dark p-3 rounded position-relative" style="height: 60px;">
+                <div class="position-absolute bg-light text-dark p-2 rounded" style="top: 10px; left: 10px;">Absoluta
                 </div>
             </div>
-            <div class="row mb-3">
-                <div class="col bg-secondary p-3 rounded">
-                    <strong>Absoluta:</strong>
-                    <div class="position-absolute bg-light text-dark p-2 rounded" style="top: 10px; left: 10px;">
-                        Posición absoluta
-                    </div>
-                </div>
-                <div class="col bg-secondary p-3 rounded">
-                    <strong>Fija:</strong>
-                    <div class="position-fixed bg-light text-dark p-2 rounded" style="top: 10px; right: 10px;">
-                        Posición fija
-                    </div>
+        </div>
+
+        <div class="mb-3">
+            <h3>Posición Fija</h3>
+            <div class="bg-dark rounded p-2 text-white">
+                <code>&lt;div class="position-fixed bg-light text-dark p-2 rounded" style="top: 10px; right: 10px;"&gt;Fija&lt;/div&gt;</code>
+            </div>
+            <div style="height: 100px; overflow-y: auto; border: 1px solid #ccc;">
+                <div class="position-fixed bg-light text-dark p-2 rounded" style="top: 10px; right: 10px;">Fija</div>
+                <p>En la esquina superior derecha</p>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <h3>Posición Sticky</h3>
+            <div class="bg-dark rounded p-2 text-white">
+                <code>&lt;div class="position-sticky bg-light text-dark p-2 rounded" style="top: 0;"&gt;Sticky&lt;/div&gt;</code>
+            </div>
+            <div style="height: 100px; overflow-y: auto; border: 1px solid #ccc;">
+                <div class="position-sticky bg-light text-dark p-2 rounded" style="top: 0;">Sticky</div>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <h3>Pegado Arriba</h3>
+            <div class="bg-dark rounded p-2 text-white">
+                <code>&lt;div class="top-0 bg-light text-dark p-2 rounded position-sticky"&gt;Pegado arriba&lt;/div&gt;</code>
+            </div>
+            <div style="height: 100px; overflow-y: auto; border: 1px solid #ccc;">
+                <div class="bg-light text-dark p-2 rounded position-sticky top-0">Pegado arriba</div>
+                <p>Contenido...</p>
+                <p>Más contenido...</p>
+            </div>
+        </div>
+
+        <div class="mb-3">
+            <h3>Pegado a la Izquierda</h3>
+            <div class="bg-dark rounded p-2 text-white">
+                <code>&lt;div class="start-0 bg-light text-dark p-2 rounded position-absolute"&gt;Pegado izquierda&lt;/div&gt;</code>
+            </div>
+            <div style="width: 200px; overflow-x: auto; border: 1px solid #ccc;">
+                <div class="bg-dark rounded p-2 position-relative" style="height: 50px;">
+                    <div class="bg-light text-dark p-2 rounded position-absolute start-0">Pegado izquierda</div>
                 </div>
             </div>
-            <div class="row mb-3">
-                <div class="col bg-secondary p-3 rounded">
-                    <strong>Sticky:</strong>
-                    <div class="position-sticky bg-light text-dark p-2 rounded" style="top: 0;">
-                        Posición sticky
-                    </div>
-                </div>
-                <div class="bg-secondary p-3 rounded position-relative" style="height: 100px;">
-                    <div class="translate-middle bg-light text-dark p-2 rounded position-absolute top-50 start-50">
-                        Centrado absoluto
-                    </div>
+        </div>
+
+        <div class="mb-3">
+            <h3>Centrado Absoluto</h3>
+            <div class="bg-dark rounded p-2 text-white">
+                <code>&lt;div class="position-absolute top-50 start-50 translate-middle bg-light text-dark p-2 rounded"&gt;Centrado&lt;/div&gt;</code>
+            </div>
+            <div class="bg-dark rounded p-3 position-relative" style="height: 80px;">
+                <div class="position-absolute top-50 start-50 translate-middle bg-light text-dark p-2 rounded">Centrado
                 </div>
             </div>
         </div>
